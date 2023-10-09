@@ -1,0 +1,43 @@
+.custom-form {
+    ion-card {
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+  
+    ion-input {
+      margin-bottom: 10px;
+    }
+  
+    ion-card-header {
+      background-color: #3880ff;
+      color: white;
+      text-align: center;
+    }
+  
+    ion-card-content {
+      padding: 20px;
+    }
+  }
+  
+  .input-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .input-field ion-label {
+    font-weight: bold; /* Puedes ajustar el estilo según tus preferencias */
+  }
+  
+  #mapp {
+    display: inline-block;
+    width: 275px;
+    height: 400px;
+  }
+
+  capacitor-google-map {
+    display: inline-block;
+    width: 275px;
+    height: 400px;
+  }
