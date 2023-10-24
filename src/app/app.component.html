@@ -1,1 +1,45 @@
-<app-navbar></app-navbar>
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-row class="apartados"> 
+      <ion-icon name="document-text-outline"></ion-icon>
+      <a href="">Reportes</a>
+    </ion-row>
+    <ion-row class="apartados">
+      <ion-icon name="calendar-outline"></ion-icon>
+      <a href="">Eventos</a>
+    </ion-row>
+    <ion-row class="apartados">
+      <ion-icon name="gift-outline"></ion-icon>
+      <a href="">Donaciones</a>
+    </ion-row>
+    <ion-row class="apartados">
+      <ion-icon name="log-out-outline"></ion-icon>
+      <a href="">Cerrar sesión</a>
+    </ion-row>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-row>
+        <ion-col size="5">
+          <ion-title>Logo</ion-title>
+        </ion-col>
+        <ion-col size="7">
+          <ion-searchbar placeholder="Buscar"></ion-searchbar>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">   
+    <router-outlet></router-outlet>
+  </ion-content>
+</div> 
