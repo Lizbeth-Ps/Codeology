@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+
 import { ReportesComponent } from './reportes/reportes.component';
 import { SeguimientoComponent } from './reportes/seguimiento/seguimiento.component';
+
+
+
+
 
 const routes: Routes = [
   {
@@ -18,10 +23,18 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'reporte',
     pathMatch: 'full'
+
   }
   
+
+
+  },
+  {
+    path: 'reporte',
+    loadChildren: () => import('./reporte/reporte.module').then( m => m.RegistroPageModule)
+  }
 
 ];
 
@@ -29,6 +42,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

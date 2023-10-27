@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Formulario y Galería de Fotos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="custom-form">
+    <ion-card>
+      <ion-card-header> Formulario </ion-card-header>
+      <ion-card-content>
+        <!-- Tus ion-input van aquí -->
+        <div class="input-field">
+          <ion-label>Titulo</ion-label>
+          <ion-input
+            [(ngModel)]="formData.titulo"
+            name="titulo"
+            placeholder="Ingresa tu nombre"
+          ></ion-input>
+        </div>
+        <div class="input-field">
+          <ion-label>Lugar</ion-label>
+          <ion-input
+            [(ngModel)]="formData.lugar"
+            name="lugar"
+            placeholder="Ingresa el lugar"
+          ></ion-input>
+        </div>
+        <div class="input-field">
+          <ion-label>Descripción</ion-label>
+          <ion-textarea
+            [(ngModel)]="formData.descripcion"
+            name="descripcion"
+            placeholder="Ingresa la descripción"
+          ></ion-textarea>
+        </div>
+        <!-- Agrega más campos según sea necesario -->
+      </ion-card-content>
+    </ion-card>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="addPhotoToGallery()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+    <button (click)="guardar()">Guardar</button>
+    <button (click)="ubicacionUsuario()">crearMapa</button>
+    <!-- Ejemplo de un botón para guardar los datos -->
+
+    <ion-grid>
+      <ion-row>
+        <ion-col
+          size="6"
+          *ngFor="let photo of photoService.photos; index as position"
+        >
+          <ion-img [src]="photo.webviewPath"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <capacitor-google-map id="map" #map></capacitor-google-map>
+</ion-content>

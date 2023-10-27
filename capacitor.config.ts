@@ -1,4 +1,5 @@
 import { CapacitorConfig } from '@capacitor/cli';
+import { exhaustAll } from 'rxjs';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
@@ -10,3 +11,7 @@ const config: CapacitorConfig = {
 };
 
 export default config;
+
+
+
+   
