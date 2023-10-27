@@ -1,0 +1,65 @@
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+}
+.activo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primario); 
+    
+}
+
+.inactivo{
+    margin-left: auto;
+    margin-right: auto;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 3px;
+    border-color: red;
+    text-shadow: 0 0 3px red;
+}
+
+
+.inactivo ion-icon {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+
+  ion-row.apartados {
+    a {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-left: 10px;
+        display: block;
+    }
+}
+
+ion-icon {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ion-content {
+    background-color: aqua;
+}
