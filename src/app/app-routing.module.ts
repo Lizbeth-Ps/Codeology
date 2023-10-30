@@ -10,12 +10,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'reporte',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
     path: 'reporte',
     loadChildren: () => import('./reporte/reporte.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginModule)
   }
 ];
 
